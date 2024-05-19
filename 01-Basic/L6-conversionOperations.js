@@ -1,6 +1,6 @@
 let score = NaN
 console.log(typeof score);
-console.log(typeof(score));
+console.log(typeof (score));
 
 let valueInNumber = Number(score);
 console.log(typeof valueInNumber);
@@ -25,11 +25,19 @@ console.log(booleanIsLoggedIn);
   "bharat" => true
  */
 
-  let someNumber = 4
-  let stringNumber = String(someNumber)
-  console.log(stringNumber);
-  console.log(typeof stringNumber);
+let someNumber = 4
+let stringNumber = String(someNumber)
+console.log(stringNumber);
+console.log(typeof stringNumber);
 
 /*
   4 => 4 ,, typeof => string
  */
+
+// ************************operations*********************
+let value = 3
+let negValues = -value
+console.log(negValues);
+
+console.log(4%3)
+// +,-,*,/,** all are operations //
