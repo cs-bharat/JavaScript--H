@@ -8,13 +8,18 @@
 
  const score = 100
  const scoreValue = 100.2
- const Id = symbol('123')
- const anotherId = symbol('123')
- console.log(Id === anotherId); // false
+
+//  const Id = symbol('123')
+//  const anotherId = symbol('123')
+//  console.log(Id === anotherId); // false
 
  const bigInt = 23434254544n
- const isTemp = null
+ console.log(typeof bigInt);
  const isLoggedIn = false;
+
+
+ const isTemp = null
+console.log(typeof isTemp);//object
 
  let userEmail;
 
@@ -22,4 +27,32 @@
 
  /* non primitive (reference) memory me reference allocated . */
 
- 
+ // array , object, function
+
+ const heros = ['shaktiman' , 'marvals' , 'spyder man' , 'balveer'];
+ console.log(typeof heros);
+
+ const myObj = {
+   name: 'bharat',
+   age : 19,
+ }
+ console.log(typeof myObj);
+
+ const myfunction = function(){
+   console.log("Welcome to my function");
+ }
+ console.log(typeof myfunction);
+
+
+ // typeof se data type fined karne per .
+ /*
+  number => number
+  undefine => undefine
+  string  => string
+  object => object
+  // imp -..//
+  null => object 
+  bigInt => false
+
+  // non-premitive ka retrun typeof -- object hi aata he //
+ */
