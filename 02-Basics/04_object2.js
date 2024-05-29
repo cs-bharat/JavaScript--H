@@ -53,3 +53,5 @@ const Users  = {
 console.log(Object.keys(Users)); // find keys in object - array form me return
 console.log(Object.values(Users)); // find vales in object - and array form me return
 console.log(Object.entries(Users)); // array - array/ return properties.
+
+console.log(Users.hasOwnProperty("city")); // boolean answer return 
