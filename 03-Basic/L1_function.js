@@ -44,11 +44,19 @@ console.log("result : ", result);
 
 // ------------ 3rd function ------------------//
 function loggedInUserMassege (username){
+      // username === undefined some as (!username) //
+    if(!username){
+        console.log("please enter a username!");
+        return
+    }
       return `${username} just logged in.`
 }
 
 // loggedInUserMassege("bharat kumar");// kuch nhi print 
-console.log(loggedInUserMassege("bharat kumar"))
-
+// console.log(loggedInUserMassege("bharat kumar"))
+console.log(loggedInUserMassege());
+console.log(loggedInUserMassege("Prajapati")); 
+/*function ke parametor me username ki value define karenge to 
+    massege me pass kya argument override hoga. => prajapati hi print hoga */
 
 
