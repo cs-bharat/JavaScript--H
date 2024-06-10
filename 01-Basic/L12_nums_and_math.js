@@ -8,8 +8,8 @@ const balance = new Number(100)
 // console.log(balance.toString());
 // console.log(balance.toString().length);
 
-const otherNumber  = 321.897
-// console.log(otherNumber.toPrecision(3)); // 124 
+const otherNumber  = 123.897
+console.log(otherNumber.toPrecision(3)); // 124 
 
 const hundreds = 1000000
 // console.log(hundreds.toLocaleString('en-IN')); // 10,00,000
@@ -18,7 +18,7 @@ const hundreds = 1000000
 // ++++++++++++++++++++++ math ++++++++++++++++++++++++++++++++++ //
 
 console.log(Math); // object
-console.log(Math.abs(-8));
+console.log(Math.abs(-8.88)); // negative to positive 
 console.log(Math.round(8.9)); // ceil,floor
 
 console.log(Math.pow(2,4));

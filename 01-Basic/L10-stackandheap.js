@@ -1,9 +1,9 @@
 // stack and heap memory //
 // primitive - stack memory milti he by pass value //
 let myYoutubeName = 'bharatprajapati'
-let anotherYoutubeName = myYoutubeName
+let anotherYoutubeName = myYoutubeName // by passe value
 
-anotherYoutubeName = 'viswapatel'
+anotherYoutubeName = 'viswapatel' // changed
 console.log(myYoutubeName);
 console.log(anotherYoutubeName);
 

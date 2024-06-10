@@ -23,7 +23,7 @@ console.log(booleanIsLoggedIn);
   1 => true, 0=>false 
   "" => false
   "bharat" => true
- */
+*/
 
 let someNumber = 4
 let stringNumber = String(someNumber)
@@ -39,5 +39,5 @@ let value = 3
 let negValues = -value
 console.log(negValues);
 
-console.log(4%3)
+// console.log(4%3)
 // +,-,*,/,** all are operations //

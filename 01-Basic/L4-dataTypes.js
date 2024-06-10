@@ -7,12 +7,13 @@ let age = 18
 let loginned = true
 let state;
 
+
   /* premitive data type 
 // name = "string"
 //  number => range 2 to power 53
 // boolean = false/true
 // null => standalone value
-let state;   // undefined 
+  let state;   // undefined 
 // let symbol => unique nes define.
 
 */

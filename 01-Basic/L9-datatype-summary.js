@@ -41,7 +41,7 @@ console.log(typeof isTemp);//object
  const myfunction = function(){
    console.log("Welcome to my function");
  }
- console.log(typeof myfunction);
+ console.log(typeof myfunction); // function
 
 
  // typeof se data type fined karne per .
