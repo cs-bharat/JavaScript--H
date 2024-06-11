@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DOM | chai or code </title>
+    <title>DOM-1 | chai or code </title>
     <style>
         .bgBody{
            background-color: #212121;
@@ -21,9 +21,24 @@
 </body>
 <script>
     //   write a javascript code //
+    // parent to child move //
     const parent = document.querySelector('.parent')
     // console.log(parent);
-    console.log(parent.children);
-    console.log(parent.children[1].innerHTML); 
+    // console.log(parent.children);
+    // console.log(parent.children[1].innerHTML); 
+
+    parent.children[1].style.color = 'orange'
+    // console.log(parent.children);
+    // console.log(parent.firstElementChild);
+
+//    child to parent move //
+     const childOne = document.querySelector('.day');
+    //  console.log(childOne);
+
+    //  console.log(childOne.parentElement)
+    //  console.log(childOne.nextElementSibling);
+
+    console.log("Nodes : " , parent.childNodes) // 9 (space , text,element all count)
+       
 </script>
 </html>
