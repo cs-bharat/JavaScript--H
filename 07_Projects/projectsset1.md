@@ -4,7 +4,7 @@
 [click here](https://stackblitz.com/edit/dom-project-chaiaurcode-88pdwj?file=1-colorChanger%2Fchaiaurcode.js)
 
 # solution  code
-## project 1
+## project 1 - background changer
 
 ```Javascript  project 1
 
@@ -36,6 +36,7 @@ buttons.forEach(function(button){
 })
 
 ```
+## project 2 - BMI calculator
 ``` JavaScript project -2
 const form = document.querySelector('form')
 
@@ -59,6 +60,8 @@ form.addEventListener("submit" , function(e){
 })
 
 ```
+
+## project 3 - Guessing random number GAME 
 
 ``` javascript project -3
 
