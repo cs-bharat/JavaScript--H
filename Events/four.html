@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SetTimeOut and SetTimeInterval</title>
+</head>
+<body>
+       <h2 class="heading">chai or code and js</h2>
+       <button id="start">start</button>
+       <button id="stop">stop</button>
+       <p id="para"></p>
+</body>
+<script>
+    const p = document.querySelector("p");
+
+    const starts = document.querySelector("#start")
+    let IntervalId;
+    starts.addEventListener("click" , function(e){
+        const userName  = function(){
+            console.log("bharat" , Date.now());
+        
+        }
+      IntervalId =  setInterval(userName , 1000)
+     })
+    
+     
+    const stops = document.querySelector("#stop")
+    stops.addEventListener("click" , function(e){
+
+        clearInterval(IntervalId);
+    })
+
+      
+
+</script>
+</html>

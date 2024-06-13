@@ -169,5 +169,8 @@ function newGame(){
 }
 
 ```
-
+## projects 4 - unlimited colors
+``` 
+ javascript project - 4 
+```
 
