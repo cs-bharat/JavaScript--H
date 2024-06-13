@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>events three</title>
+</head>
+<body style="background-color: #212121; display: flex; color: #fff;">
+    <div class="container" style="display: flex; flex-direction: column; gap: 20px;">
+      <input type="file" id="input">
+      <output id="output">choose iamage files...</output>
+    </div>
+</body>
+
+<script>
+      const allowedFilesType = ['image/png' , 'image/jpeg' , 'image/gif'];
+
+      const input = document.getElementById("input");
+      const output = document.getElementById("output");
+
+      input.addEventListener("change" , (e) => {
+        const files =  e.target.files;
+        console.log(files);
+
+        if (files.length === 0) {
+        output.innerText = "Choose image files…";
+        return;
+        }
+
+        const allAllowed = Array.from(files).every((file) =>
+            allowedFilesType.includes(file.type));
+
+             output.innerText = allAllowed
+            ? "Done"
+            : "Please choose image files only.";
+         })
+
+</script>
+</html>

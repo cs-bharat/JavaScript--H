@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events two</title>
+</head>
+<body>
+      <input type="text" id="textBox"/>
+      <div id="output"></div>
+
+      <p>move your mouse se it position</p>
+      <p id="screenLog"></p>
+</body>
+<script>
+
+   const inputBox = document.querySelector("#textBox");
+   inputBox.addEventListener("keydown" , function(e){
+       console.log(e);
+    output.textContent  = `your pressed = ${e.key}.`;
+   })
+
+//    -------------------------------//
+   const mouseMove = document.querySelector("#screenLog");
+   document.addEventListener("mousemove" , logKey)
+  
+   function logKey(e) {
+    screenLog.innerText = `
+    Screen X/Y: ${e.screenX}, ${e.screenY}
+    Client X/Y: ${e.clientX}, ${e.clientY}`;
+}
+
+</script>
+</html>
