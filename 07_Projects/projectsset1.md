@@ -170,7 +170,44 @@ function newGame(){
 
 ```
 ## projects 4 - unlimited colors
-``` 
- javascript project - 4 
+``` javascript project - 4 
+
+ // hex randommcolor generate karna he //
+  
+const randomColor = function(){
+  const hex = '0123456789ABCDEF';
+  let color = '#';
+
+  // hex color range  six digit //
+  for(let i = 0 ; i<6 ; i++){
+    color += hex[Math.floor(Math.random() * 16)]
+  }
+  return color;
+ 
+}
+// console.log(randomColor());
+
+let IntervalId;
+const startChangingColor = function(){
+
+  if(!IntervalId){
+    IntervalId = setInterval(changeColor , 1000);  
+  }  
+  // continue color changes hote rahe
+  function changeColor(){
+    document.body.style.backgroundColor = randomColor();  
+  }
+  
+}
+
+const stopChangingColor = function(){
+  clearInterval(IntervalId);
+  IntervalId = null; // id ko flash out kar lo
+}
+
+document.querySelector("#start").addEventListener("click" , startChangingColor); 
+// startChangingColor ka raference liya he //
+document.querySelector("#stop").addEventListener("click" , stopChangingColor); 
+
 ```
 
