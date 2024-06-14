@@ -16,7 +16,7 @@ const promiseOne = new Promise(function(resolve,reject){
 
 // consumed promise //
 promiseOne.then(function(){
-    console.log("promise consumed.");
+    console.log("promise consumed. promiseOne");
 })
 // -------------------------------------//
 // second way to creation and consumed promise //
@@ -26,7 +26,7 @@ new Promise(function(resolve , reject){
         resolve()
     } , 1000)
 }).then(function(){
-    console.log("promise two consumed..")
+    console.log("promise two consumed..  promiseTwo")
 })
 
 // ----------- third promise --------------------//
@@ -50,7 +50,7 @@ const promiseFour = new Promise(function(resolve , reject) {
         if(!error){ // noError tab
             resolve({username:"Hitesh Choudhury" ,  age:"37" , password:"232"})
         }else{ // error
-            reject("somthing : want to error in DB");
+            reject("somthing : want to error in DB promiseFour");
         }
     } , 2000);
 })
@@ -79,7 +79,7 @@ const promiseFive = new Promise(function(resolve , reject){
           if(!Error){
             resolve({username:"Javascript" , password:"41"});
           }else{
-            reject("Somthing: want rong js Error.");
+            reject("Somthing: want rong js Error. promiseFive");
           }
     },3000)
 });
@@ -97,3 +97,34 @@ async function promiseFiveConsumed(){
 
 promiseFiveConsumed();
 
+
+// fetch method se data access //
+
+// fetch("https://jsonplaceholder.typicode.com/users")
+// .then((response)=>{
+//  return response.json();
+// })
+// .then((data)=> {
+//   console.log(data);
+// })
+// .catch((error)=>{
+//  console.log(error);
+// })
+
+
+// async ,await se bhi data acces //
+async function AllUserData(){
+    try{
+        // fetch me data ko json me convert karna hi padta he ..//
+        /* async work he to fecth method or usei fetch ko jis variable me store 
+          kiya hoga useko bhi await karvana compalsory he .. */
+        const response = await fetch("https://jsonplaceholder.typicode.com/users")
+        const data = await response.json();
+        console.log(data);
+    }
+    catch(error){
+        console.log(error);
+    }
+}
+
+AllUserData();
