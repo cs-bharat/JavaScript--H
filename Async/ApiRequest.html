@@ -5,10 +5,78 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>API request With XML-HTTP-REQUESTS </title>
 </head>
-<body>
+<body style="background-color: #212121; color: #fff;">
+    <div class="container" style="border: 1px dotted wheat;">
+        <h2 style = "font-Size:2rem; text-align: center;"  class="card-heading">
+                 Github card use Github API
+        </h2>
+
+        <div class="image" style="display: flex; justify-content: center; align-items: center;
+        gap: 1.6rem;">
+            <img src="https://avatars.githubusercontent.com/u/11613311?v=4"
+             alt="user-image" id="img" style="width: 200px; border-radius: 50%;">
+             <p class="userName" style="font-size: 1.4rem;"></p>
+        </div>
+
+        <div class="card-data" style="display: flex; justify-content: center; align-items: center; border: 1px dotted rgb(156, 156, 170);">
+        <div class="followers" style="padding: 1rem; text-align: center;">
+            <p  style="font-size: 1.4rem;">followers</p>
+            <p id="github-followers"></p>
+        </div>
+
+        <div class="following" style="padding: 1rem;text-align: center;" >
+            <p  style="font-size: 1.4rem;">following</p>
+            <p id="github-following"></p>
+        </div>
+
+        <div class="Repose" style="padding: 1rem; text-align: center;">
+            <p style="font-size: 1.4rem;">Repository </p>
+            <p id="github-Repository"></p>
+        </div>
+    </div>
+        
+    </div>
     
 </body>
-    <style>
-        
-    </style>
+   <script>
+
+     const requestURL = 'https://api.github.com/users/hiteshchoudhary';
+    //  XMLHttpsrequest send karenge //
+     const xhr  =  new XMLHttpRequest();
+     // get request send
+     xhr.open("GET" , requestURL);
+     xhr.onreadystatechange =  function(){ // 2,3,4 state print
+        console.log(xhr.readyState); // only 1 hi ready state print karega hame continues state print karvani he
+   
+        if(xhr.readyState === 4){
+            // JSON.parse => nhi kare to data ke under se property access nhi kar paynge .
+            // JSON.parse => data object me converted and easily access property
+        let data = JSON.parse(this.responseText);  // this current context me hi 
+        console.log(typeof data) // string me data aata he most time 
+        // console.log(data.followers); 
+
+        const followersData = document.getElementById("github-followers")
+        followersData.innerText = data.followers;
+
+        const followingData = document.getElementById("github-following")
+        followingData.innerText = data.following;
+
+        const RepositoryData = document.getElementById("github-Repository")
+         RepositoryData.innerText = data.public_repos;
+
+        const UserNamee = document.querySelector(".userName");
+         UserNamee.innerText = data.name;
+
+     }
+    }
+     xhr.send()
+
+
+    //  console.log => browser ka tools he debbuging tool ye . ja ka run time 
+                    // injected karta he(console ko).
+
+                    /* javascript ko run karne vala engine (V8) engine he jo 
+                      ki c++ me likha gaya he .
+                    */
+   </script>
 </html>
