@@ -91,14 +91,14 @@ async function promiseFiveConsumed(){
         const response =  await promiseFive;
         console.log(response);
     }catch(err){
-  console.log(err);
+    console.log(err);
     }
 }
 
 promiseFiveConsumed();
 
 
-// fetch method se data access //
+// fetch method se data access using then and catch //
 
 // fetch("https://jsonplaceholder.typicode.com/users")
 // .then((response)=>{
@@ -112,7 +112,7 @@ promiseFiveConsumed();
 // })
 
 
-// async ,await se bhi data acces //
+// async ,await use function  se bhi data acces (try,catch block) //
 async function AllUserData(){
     try{
         // fetch me data ko json me convert karna hi padta he ..//
@@ -128,3 +128,19 @@ async function AllUserData(){
 }
 
 AllUserData();
+
+// fetch network based request he jo ki resource ko network se lane me
+// help karta he ..
+/* interview
+  fetch method error code(400) return kare to vo bhi aak
+   response hi he jo ki resolve ho kar error code (400) return kar raha he .
+ */ 
+
+   /*
+   global variable (response)
+   fetch 2 step me kam karta he 
+   1) data ke liye memory me space reserved karna (onfulfield , onrejection)
+   2) web browser thorw network request karna or vase response lana .
+         or memory me create data variable me store karna .
+         and then  global variable me assign karna .
+   */
