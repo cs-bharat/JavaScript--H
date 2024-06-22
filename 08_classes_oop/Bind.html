@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bind React</title>
+</head>
+<body style="background-color:#212121;">
+    <button>Button Bind</button>
+</body>
+<script>
+        class React{
+            constructor(){
+                this.Library  = "React"
+                this.server   = "http://localhost:3000"
+                this.tools    = "NextJs"
+
+                // requirement 
+                document
+                .querySelector("button")
+                .addEventListener("click" , this.handleClick.bind(this));
+            }
+
+            handleClick(){
+                    console.log("button was clicked");
+                    // console.log(this); 
+          //this ka rafference he but under ki value ka excess nhi//
+          console.log(this); // react class excess hotga pura . for used (bind) 
+          console.log(this.tools);
+            }
+        }
+
+        const app = new React()
+</script>
+</html>
