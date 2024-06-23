@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lexical and closure</title>
+</head>
+<body style="background-color: #212121;">
+    <h2 style="color: aliceblue;">lexical and closure scoping interview</h2>
+    <button id="orange">Orange</button>
+    <button id="green">Green</button>
+</body>
+<script>
+     function makefunc(){
+        let name = "mozila";
+        function displayName(){
+            console.log(name);
+        }
+        return displayName; // only outer function nhi pura lexical scope return hoga.
+        // memory role me aa jati he resion inner connected he outer function se //
+
+     }
+
+     const myfunc = makefunc();
+       myfunc()
+
+    //    real use case lexical scoping and closure // 
+    
+    /* yahi work 40 bar karna ho tab 40 button per click karke bg change
+            document.getElementById('orange').onclick = function(){
+                document.body.style.backgroundColor = "orange";
+            }
+            document.getElementById('green').onclick = function(){
+                document.body.style.backgroundColor = "green";
+            }
+    */
+
+    /* clickHandler bana dete he */
+    function clickHandler(color){
+        // closure concept (lexical scoping)
+       return function(){
+           document.body.style.backgroundColor = `${color}`
+        }
+// return karne per lexical scope return ho raha he jis se 2 function ke pass (color) ka access hoga. 
+      
+    }
+
+    document.getElementById("orange").onclick = clickHandler("orange")
+    document.getElementById("green").onclick = clickHandler("green")
+
+</script>
+</html>
